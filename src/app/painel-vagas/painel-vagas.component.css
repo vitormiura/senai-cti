@@ -1,0 +1,35 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+.conteudo{
+    color: black;
+    padding: 10px 5rem;
+    border-radius: 5px;
+    background-color: rgb(175, 175, 175);
+    margin-top: 50px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+form{
+    padding: 0.5rem;
+    margin: auto;
+}
+button{
+    padding: 0.3rem;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+input[type="text"]{
+    display: block;
+    width: 100%;
+    padding: 0.1rem 0.5rem;
+    border: solid 1px black;
+    background-color: rgb(240, 236, 236);
+    color: rgb(77, 77, 77);
+    border-radius: 15px;
+}
+
