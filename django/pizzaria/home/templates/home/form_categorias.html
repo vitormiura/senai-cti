@@ -1,0 +1,40 @@
+{% load static %}
+
+{% include 'home/topo.html' %}
+
+<div class="conteudo">
+    
+    <h1>Cadastrar produto</h1>
+    <div class="form">
+        <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            <input type="text" name="nome" id="" placeholder="Nome do produto">
+            <input type="text" name="preco" id="" placeholder="Preço">
+            <input type="text" name="quantidade" id="" placeholder="Quantidade">
+
+            <select name="tamanho" id="">
+                <option selected disabled>Escolha o tamanho</option>
+                <option value="1">(Grande)</option>
+                <option value="2">(Medio)</option>
+                <option value="3">(Pequeno)</option>
+            </select>
+
+
+            <select name="categoria" id="">
+                <option selected disabled>Escolha a categoria</option>
+                {%for linha in dados_categoria%}
+                <option value="{{linha.id}}">{{linha.nome}}</option>
+                {%endfor%}
+            </select>
+
+
+
+            <input type="file" name="foto" id="">
+            <input type="submit" value="Salvar" id="">
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

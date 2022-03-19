@@ -1,0 +1,17 @@
+{% load static %}
+
+{% include 'home/topo.html' %}
+
+<div class="conteudo">
+    {% for linhas in dados %}
+   <h3>{{ linhas.nome }}</h3> 
+    <p>{{ linhas.tamanho }}</p>
+    <br>
+    <a href="{% url 'detalhes' linhas.id %}">Detalhes</a>
+    <hr>
+    <br>
+    {% endfor %}
+</div>
+
+
+

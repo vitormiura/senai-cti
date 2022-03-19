@@ -1,0 +1,15 @@
+{% load static %}
+{% include 'home/topo.html' %}
+
+<body>
+    <div class="conteudo">
+        <h2>Detalhes</h2>
+        <h3>{{ detproduto.nome }}</h3> 
+        <p>{{ detproduto.tamanho }}</p>
+        <p>{{ detproduto.preco }}</p> 
+        <img width='200px' height='200px' src="{{ detproduto.foto.url }}" alt="">
+        <br><br>
+        <a href="">Comprar</a> 
+    </body>
+    </div>
+</body>
