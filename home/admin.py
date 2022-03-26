@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from home.models import Curso, Aluno
+
+
+@admin.register(Curso)
+class detCurso(admin.ModelAdmin):
+    list_display = ('id',)
+
+
+@admin.register(Aluno)
+class detAluno(admin.ModelAdmin):
+    list_display = ('id',)
