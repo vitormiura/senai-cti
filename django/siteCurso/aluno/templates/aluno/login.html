@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+{% include 'menu.html' %}
+<div class="container"
+     style="max-width:400px;
+     border:solid 1px #ccc;
+     padding:2rem; margin-top:3rem">
+
+    <h2 class="mt-4 mb-4" >Login</h2>
+    {% include 'msg.html' %}
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label">Usuário</label>
+            <input type="text" class="form-control" name="usuario">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Senha</label>
+            <input type="password" class="form-control" name="senha1">
+        </div>
+        <button type="submit" class="btn btn-primary">Fazer login</button>
+        <a class="btn btn-outline-primary" href="{% url 'cadastrar'%} ">Fazer cadastro</a>
+    </form>
+</div>
+
+</body>
+</html>
